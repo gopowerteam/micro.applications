@@ -1,5 +1,6 @@
 /* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
+  "exclude": ["./node_modules/**/*.ts"],
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
@@ -12,9 +13,19 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "es2020",
-    "lib": [
-      "es2018",
-      "dom"
-    ]
+    "esModuleInterop": true,
+    "lib": ["es2018", "dom"],
+    "typeRoots": ["node_modules/@types"],
+    "paths": {
+      "@app/*": ["src/app/*"],
+      "@single-spa/*": ["src/singe-spa/*"],
+      "@env/*": ["src/environments/*"]
+      // "@shared/*": ["src/app/shared/*"],
+      // "@core/*": ["src/app/core/*"]
+    }
+  },
+  "angularCompilerOptions": {
+    "fullTemplateTypeCheck": true,
+    "strictInjectionParameters": true
   }
 }
