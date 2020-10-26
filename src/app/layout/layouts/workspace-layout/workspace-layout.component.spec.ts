@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LayoutSideComponent } from './layout-side.component';
+import { WorkspaceLayoutComponent } from './workspace-layout.component';
 
-describe('LayoutSideComponent', () => {
-  let component: LayoutSideComponent;
-  let fixture: ComponentFixture<LayoutSideComponent>;
+describe('WorkspaceLayoutComponent', () => {
+  let component: WorkspaceLayoutComponent;
+  let fixture: ComponentFixture<WorkspaceLayoutComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ LayoutSideComponent ]
+      declarations: [ WorkspaceLayoutComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(LayoutSideComponent);
+    fixture = TestBed.createComponent(WorkspaceLayoutComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -11,6 +11,6 @@ export class LayoutSideComponent implements OnInit {
   ngOnInit(): void {}
 
   public changeApplication(path) {
-    navigateToUrl(path);
+    // navigateToUrl(path);
   }
 }

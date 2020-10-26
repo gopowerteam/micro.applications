@@ -1,0 +1,19 @@
+{
+  "type": "application",
+  "title": "app0",
+  "name": "app01",
+  "path": "app01",
+  "icon": "/assets/images/svg/profile.svg",
+  "order": 1,
+  "hidden": false,
+  "menu": [
+    {
+      "title": "page1",
+      "path": "/app01/page1"
+    },
+    {
+      "title": "page2",
+      "path": "/app01/page2"
+    }
+  ]
+}

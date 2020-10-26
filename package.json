@@ -2,14 +2,9 @@
   "name": "applications",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e",
+    "dev:single-spa:app01": "ng s app01 --disable-host-check --port 4400 --deploy-url http://localhost:4400/ --live-reload false",
     "build:single-spa:app01": "ng build app01 --prod --deploy-url http://localhost:4400/",
-    "serve:single-spa:app01": "ng s app01 --disable-host-check --port 4400 --deploy-url http://localhost:4400/ --live-reload false"
+    "build": "gulp build"
   },
   "private": true,
   "dependencies": {
@@ -21,6 +16,7 @@
     "@angular/platform-browser": "~10.1.6",
     "@angular/platform-browser-dynamic": "~10.1.6",
     "@angular/router": "~10.1.6",
+    "ng-zorro-antd": "^10.0.2",
     "rxjs": "~6.6.0",
     "single-spa": ">=4.0.0",
     "single-spa-angular": "^4.5.0",
@@ -36,6 +32,7 @@
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^12.11.1",
     "codelyzer": "^6.0.0",
+    "gulp": "^4.0.2",
     "jasmine-core": "~3.6.0",
     "jasmine-spec-reporter": "~5.0.0",
     "karma": "~5.0.0",

@@ -23,7 +23,15 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "aot": true,
-            "assets": ["src/favicon.ico", "src/assets"],
+            "assets": [
+              "src/favicon.ico",
+              "src/assets",
+              {
+                "glob": "**/*",
+                "input": "./node_modules/@ant-design/icons-angular/src/inline-svg/",
+                "output": "/assets/"
+              }
+            ],
             "styles": ["src/styles.less"],
             "scripts": []
           },
@@ -90,11 +98,7 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "tsconfig.app.json",
-              "tsconfig.spec.json",
-              "e2e/tsconfig.json"
-            ],
+            "tsConfig": ["tsconfig.app.json", "tsconfig.spec.json", "e2e/tsconfig.json"],
             "exclude": ["**/node_modules/**"]
           }
         },
@@ -132,10 +136,7 @@
             "polyfills": "projects/app01/src/polyfills.ts",
             "tsConfig": "projects/app01/tsconfig.app.json",
             "aot": true,
-            "assets": [
-              "projects/app01/src/favicon.ico",
-              "projects/app01/src/assets"
-            ],
+            "assets": ["projects/app01/src/favicon.ico", "projects/app01/src/assets", "projects/app01/src/config.json"],
             "styles": ["projects/app01/src/styles.less"],
             "scripts": [],
             "customWebpackConfig": {
@@ -199,10 +200,7 @@
             "polyfills": "projects/app01/src/polyfills.ts",
             "tsConfig": "projects/app01/tsconfig.spec.json",
             "karmaConfig": "projects/app01/karma.conf.js",
-            "assets": [
-              "projects/app01/src/favicon.ico",
-              "projects/app01/src/assets"
-            ],
+            "assets": ["projects/app01/src/favicon.ico", "projects/app01/src/assets"],
             "styles": ["projects/app01/src/styles.less"],
             "scripts": []
           }

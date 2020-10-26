@@ -1,0 +1,9 @@
+{
+  "/api": {
+    "target": "https://qlouddop.ftyq.service.sd",
+    "secure": false,
+    "changeOrigin": true,
+    "ignorePath": false,
+    "logLevel": "debug"
+  }
+}
