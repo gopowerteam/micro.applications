@@ -12,4 +12,6 @@ RUN yarn config set registry https://registry.npm.taobao.org \
 # 运行阶段
 FROM xbt-coder-docker.pkg.coding.net/xbt-platform/web/application-service as app
 
-COPY --from=builder /builder/dist/ /app/public/
+COPY --from=builder /builder/dist/ /app/public/applications/
+
+EXPOSE 8090
