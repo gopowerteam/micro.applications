@@ -10,7 +10,7 @@ WORKDIR /builder
 #   && rm -rf src node_modules
 
 # 运行阶段
-FROM xbt-coder-docker.pkg.coding.net/xbt-platform/web/application-service as app
+FROM xbt-coder-docker.pkg.coding.net/xbt-platform/web/application-service:master-ee5a31f3f3a0c2c6aecb7cbf1da6e32a597f1832 as app
 
 COPY --from=builder /builder/dist/ /app/public/
 
