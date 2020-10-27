@@ -1,6 +1,6 @@
 # Applications
 
-服务应用
+前端服务应用
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.7.
 
 ## Development server
