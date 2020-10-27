@@ -12,7 +12,7 @@ RUN yarn config set registry https://registry.npm.taobao.org \
 # 运行阶段
 FROM application-service as app
 
-COPY --from=builder /builder/ /app/
+COPY --from=builder /builder/dist/ /app/public/
 
 EXPOSE 8090
 
