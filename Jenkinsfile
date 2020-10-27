@@ -26,6 +26,13 @@ pipeline {
 
       }
     }
+    // stage("构建") {
+    //   steps {
+    //     script {
+    //        sh 'curl -d '{"secret_key":"<秘钥>"}' -H "Content-type: application/json" -X POST <API地址>'
+    //     }
+    //   }
+    // }
   }
   environment {
     CODING_DOCKER_REG_HOST = "${CCI_CURRENT_TEAM}-docker.pkg.${CCI_CURRENT_DOMAIN}"
