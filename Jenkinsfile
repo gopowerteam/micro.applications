@@ -26,7 +26,7 @@ pipeline {
 
       }
     }
-    stage("构建") {
+    stage("部署镜像") {
       steps {
         script {
            sh "curl -d '{\"secret_key\":\"${DEPLOY_SECRET}\"}' -H \"Content-type: application/json\" -X POST ${DEPLOY_API}"
