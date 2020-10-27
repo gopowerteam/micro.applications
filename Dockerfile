@@ -14,4 +14,6 @@ FROM xbt-coder-docker.pkg.coding.net/xbt-platform/web/application-service as app
 
 COPY --from=builder /builder/dist/ /app/public/applications/
 
+WORKDIR /app
+
 EXPOSE 8090
