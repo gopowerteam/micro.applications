@@ -1,0 +1,20 @@
+{
+  "type": "application",
+  "title": "auth",
+  "name": "auth",
+  "path": "auth",
+  "icon": "/assets/images/svg/profile.svg",
+  "order": 1,
+  "hidden": false,
+  "layout": "empty",
+  "menu": [
+    {
+      "title": "login",
+      "path": "/auth/login"
+    },
+    {
+      "title": "register",
+      "path": "/auth/register"
+    }
+  ]
+}

@@ -6,6 +6,7 @@
   "icon": "/assets/images/svg/profile.svg",
   "order": 1,
   "hidden": false,
+  "layout": "workspace",
   "menu": [
     {
       "title": "page1",

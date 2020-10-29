@@ -2,9 +2,11 @@
   "name": "applications",
   "version": "0.0.0",
   "scripts": {
+    "dev:single-spa:auth": "ng s auth --disable-host-check --port 4300 --deploy-url http://localhost:4300/ --live-reload false",
     "dev:single-spa:app01": "ng s app01 --disable-host-check --port 4400 --deploy-url http://localhost:4400/ --live-reload false",
-    "build:single-spa:app01": "ng build app01 --prod --deploy-url http://localhost:4400/",
     "dev:single-spa:app02": "ng s app02 --disable-host-check --port 4500 --deploy-url http://localhost:4500/ --live-reload false",
+    "build:single-spa:auth": "ng build auth --prod --deploy-url http://localhost:4300/",
+    "build:single-spa:app01": "ng build app01 --prod --deploy-url http://localhost:4400/",
     "build:single-spa:app02": "ng build app02 --prod --deploy-url http://localhost:4500/",
     "build": "gulp build",
     "e2e": "ng e2e"
