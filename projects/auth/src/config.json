@@ -6,7 +6,7 @@
   "icon": "/assets/images/svg/profile.svg",
   "order": 1,
   "hidden": true,
-  "layout": "empty",
+  "layout": "default",
   "menu": [
     {
       "title": "login",
