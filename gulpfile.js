@@ -45,16 +45,27 @@ function cleanCommand() {
  * 编译命令
  * @param {*} done
  */
-function compileCommand(done) {
-  return Promise.all(
-    getProjects().map((project) => {
-      const cmd = ['ng', 'build', project, '--prod'].join(' ')
-      return execPromise(cmd)
-    })
-  ).then(() => {
-    console.log('所有插件打包完成')
-    done()
-  })
+async function compileCommand(done) {
+  const projects = getProjects()
+
+  while (projects.length) {
+    const project = projects.shift()
+    const cmd = ['ng', 'build', project, '--prod'].join(' ')
+    await execPromise(cmd)
+  }
+
+  console.log('所有插件打包完成')
+  done()
+
+  // return Promise.all(
+  //   getProjects().map((project) => {
+  //     const cmd = ['ng', 'build', project, '--prod'].join(' ')
+  //     return execPromise(cmd)
+  //   })
+  // ).then(() => {
+  //   console.log('所有插件打包完成')
+  //   done()
+  // })
 }
 
 const commands = {
